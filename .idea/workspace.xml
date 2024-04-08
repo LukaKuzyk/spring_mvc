@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adb4d103-f7e8-4fa4-abf7-ffded94e7458" name="Changes" comment="third lesson commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luka_kuzyk/spring/mvc/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luka_kuzyk/spring/mvc/MyController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +191,7 @@
       <workItem from="1712216327712" duration="3715000" />
       <workItem from="1712220590474" duration="2939000" />
       <workItem from="1712253640065" duration="1196000" />
+      <workItem from="1712558648750" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -224,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712223038034</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="third lesson commit">
+      <option name="closed" value="true" />
+      <created>1712558919699</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712558919699</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
