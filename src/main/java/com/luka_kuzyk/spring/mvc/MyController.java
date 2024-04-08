@@ -2,13 +2,14 @@ package com.luka_kuzyk.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-//@RequestMapping("/employee")
+@RequestMapping("/employee")
 public class MyController{
 
     @RequestMapping("/")
@@ -17,21 +18,38 @@ public class MyController{
     }
 
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails(){
+    public String askEmployeeDetails(Model model){
+
+        Employee employee = new Employee();
+        employee.setName("Istvan");
+        employee.setSalary(300);
+//        model.addAttribute("employee",employee);
+
+        model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
 
     @RequestMapping("/showDetails")
-    public String showEmpDetails(@RequestParam("employeeName") String empName,
-                                 Model model){
+    public String showEmpDetails(@ModelAttribute("employee") Employee emp){
+        String name = emp.getName();
+        emp.setName("Mr " + name);
 
-        empName = "Mr " + empName + " - ";
-
-        model.addAttribute("nameAttribute", empName);
-        model.addAttribute("description", "programmer");
-
+        int salary = emp.getSalary();
+        emp.setSalary(salary*10);
         return "show-emp-details-view";
     }
+
+//    @RequestMapping("/showDetails")
+//    public String showEmpDetails(@RequestParam("employeeName") String empName,
+//                                 Model model){
+//
+//        empName = "Mr " + empName + " - ";
+//
+//        model.addAttribute("nameAttribute", empName);
+//        model.addAttribute("description", "programmer");
+//
+//        return "show-emp-details-view";
+//    }
 
 //        @RequestMapping("/showDetails")
 //    public String showEmpDetails(HttpServletRequest request, Model model){
